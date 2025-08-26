@@ -1,13 +1,17 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Welcome } from './src/screens';
+import { PublicFlow } from './src/navigation/PublicFlow';
+import { PrivateFlow } from './src/navigation/PrivateFlow';
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <Welcome />
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <SafeAreaProvider>
+        {false ? <PublicFlow /> : <PrivateFlow />}
+      </SafeAreaProvider>
+    </NavigationContainer>
   );
 };
 
