@@ -1,15 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
-import { ScreenTemplate } from '../atoms';
 
-const Welcome = () => {
+import { ScreenTemplate } from '../../atoms';
+
+const Login = () => {
   return (
     <ScreenTemplate>
-      <Text>Welcome</Text>
+      <Text>Login</Text>
     </ScreenTemplate>
   );
 };
 
-export { Welcome };
+export { Login };
 
 const styles = StyleSheet.create({});
