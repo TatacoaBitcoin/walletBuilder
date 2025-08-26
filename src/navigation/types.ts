@@ -5,12 +5,14 @@ export enum Routes {
   Welcome = 'Welcome',
   Login = 'Login',
   // Private
+  Main = 'Main',
   Home = 'Home',
+  Settings = 'Settings',
   // Tabs
 }
 
 export type PrivateFlowParamList = {
-  Home: undefined;
+  Main: undefined;
 };
 
 export type PublicFlowParamList = {

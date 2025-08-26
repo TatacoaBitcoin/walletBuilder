@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { PrivateFlowParamList, Routes } from './types';
-import { Home } from '../screens';
+import { PrivateFlowParamList } from './types';
+import { TabsFlow } from './TabsFlow';
 
 const Stack = createNativeStackNavigator<PrivateFlowParamList>();
 
@@ -11,8 +11,8 @@ export const PrivateFlow = () => {
   return (
     <Stack.Navigator screenOptions={STACK_OPTIONS}>
       <Stack.Screen
-        name={Routes.Home}
-        component={Home}
+        name="Main"
+        component={TabsFlow}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
