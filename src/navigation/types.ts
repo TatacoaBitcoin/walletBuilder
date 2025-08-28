@@ -4,15 +4,18 @@ export enum Routes {
   // Public
   Welcome = 'Welcome',
   Login = 'Login',
-  // Private
-  Main = 'Main',
+  // Tabs
   Home = 'Home',
   Settings = 'Settings',
-  // Tabs
+  // Private
+  Main = 'Main',
+  // Settings
+  Language = 'Language',
 }
 
 export type PrivateFlowParamList = {
   Main: undefined;
+  Language: undefined;
 };
 
 export type PublicFlowParamList = {
@@ -20,7 +23,7 @@ export type PublicFlowParamList = {
   Login: undefined;
 };
 
-export type MainFlowScreenProps<T extends keyof PrivateFlowParamList> =
+export type PrivateFlowScreenProps<T extends keyof PrivateFlowParamList> =
   NativeStackScreenProps<PrivateFlowParamList, T>;
 
 export type PublicFlowScreenProps<T extends keyof PublicFlowParamList> =

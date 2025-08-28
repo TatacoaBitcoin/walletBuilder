@@ -1,0 +1,15 @@
+{
+  "navigation": {
+    "privateFlow": {
+      "Home": "Home",
+      "Settings": "Settings"
+    },
+    "publicFlow": {
+      "Welcome": "Welcome",
+      "Login": "Login"
+    }
+  },
+  "Home": {
+    "LanguageBtn": "Change Language"
+  }
+}

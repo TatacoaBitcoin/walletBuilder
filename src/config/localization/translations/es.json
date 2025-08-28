@@ -1,0 +1,15 @@
+{
+  "navigation": {
+    "privateFlow": {
+      "Home": "Inicio",
+      "Settings": "Ajustes"
+    },
+    "publicFlow": {
+      "Welcome": "Bienvenida",
+      "Login": "Acceso"
+    }
+  },
+  "Home": {
+    "LanguageBtn": "Cambiar Idioma"
+  }
+}
