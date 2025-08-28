@@ -8,5 +8,8 @@
       "Welcome": "Bienvenida",
       "Login": "Acceso"
     }
+  },
+  "Home": {
+    "LanguageBtn": "Cambiar Idioma"
   }
 }
