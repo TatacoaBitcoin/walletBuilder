@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { PrivateFlowParamList } from './types';
+import { PrivateFlowParamList, Routes } from './types';
 import { TabsFlow } from './TabsFlow';
-import { Language } from '../screens';
+import { Language, Scanner } from '../screens';
 
 const Stack = createNativeStackNavigator<PrivateFlowParamList>();
 
@@ -12,15 +12,16 @@ export const PrivateFlow = () => {
   return (
     <Stack.Navigator screenOptions={STACK_OPTIONS}>
       <Stack.Screen
-        name="Main"
+        name={Routes.Main}
         component={TabsFlow}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Language"
+        name={Routes.Language}
         component={Language}
         options={{ headerShown: false, presentation: 'modal' }}
       />
+      <Stack.Screen name={Routes.Scanner} component={Scanner} />
     </Stack.Navigator>
   );
 };
