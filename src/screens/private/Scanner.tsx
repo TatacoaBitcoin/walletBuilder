@@ -7,6 +7,7 @@ import {
   useCameraDevice,
   useCodeScanner,
 } from 'react-native-vision-camera';
+import { Button } from '@react-navigation/elements';
 
 import { useIsForeground } from '../../hooks/useIsForeground';
 
@@ -18,15 +19,16 @@ const Scanner = () => {
   const isFocused = useIsFocused();
   const isForeground = useIsForeground();
   const isActive = isFocused && isForeground;
+  const hasTorch = device?.hasTorch;
 
   // 3. (Optional) enable a torch setting
   const [torch, setTorch] = useState(false);
 
   // 4. On code scanned, print to console
   const onCodeScanned = useCallback((codes: Code[]) => {
-    console.log(`Scanned ${codes.length} codes:`, codes);
     const value = codes[0]?.value;
     if (value == null) return;
+    console.log('Scanned', value);
   }, []);
 
   // 5. Initialize the Code Scanner to scan QR codes and Barcodes
@@ -34,6 +36,12 @@ const Scanner = () => {
     codeTypes: ['qr', 'ean-13'],
     onCodeScanned: onCodeScanned,
   });
+
+  const handleTorchPress = () => {
+    if (hasTorch) {
+      setTorch(!torch);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -47,6 +55,11 @@ const Scanner = () => {
           enableZoomGesture={true}
         />
       )}
+      {hasTorch && (
+        <View style={styles.rightButtonRow}>
+          <Button onPress={handleTorchPress}>Torch</Button>
+        </View>
+      )}
     </View>
   );
 };
@@ -57,5 +70,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'black',
+  },
+  rightButtonRow: {
+    position: 'absolute',
+    right: 20,
+    top: 20,
   },
 });
