@@ -1,10 +1,12 @@
-export const LANGUAGES = [
+import { Languages } from '../../types';
+
+export const LANGUAGES_LIST = [
   {
     label: 'Español',
-    value: 'es',
+    value: Languages.es,
   },
   {
     label: 'English',
-    value: 'en',
+    value: Languages.en,
   },
 ];

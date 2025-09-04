@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 
 import { margin, padding } from '../../../styles/spacing';
-import { LANGUAGES } from '../../../config/localization/languages';
+import { LANGUAGES_LIST } from '../../../config/localization/languages';
 
 const Language = () => {
   const navigation = useNavigation();
@@ -17,7 +17,7 @@ const Language = () => {
 
   return (
     <View style={styles.container}>
-      {LANGUAGES.map(item => (
+      {LANGUAGES_LIST.map(item => (
         <TouchableOpacity
           key={item.value}
           style={styles.itemContainer}
