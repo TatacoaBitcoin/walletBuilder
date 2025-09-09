@@ -9,6 +9,7 @@ export enum Routes {
   Settings = 'Settings',
   // Private
   Main = 'Main',
+  Scanner = 'Scanner',
   // Settings
   Language = 'Language',
 }
@@ -16,6 +17,7 @@ export enum Routes {
 export type PrivateFlowParamList = {
   Main: undefined;
   Language: undefined;
+  Scanner: undefined;
 };
 
 export type PublicFlowParamList = {

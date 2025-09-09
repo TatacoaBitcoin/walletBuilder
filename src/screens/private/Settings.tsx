@@ -15,7 +15,7 @@ const Settings = () => {
     <ScreenTemplate>
       <Text>Settings</Text>
       <Button onPress={() => navigation.navigate(Routes.Language)}>
-        {t('Home.LanguageBtn')}
+        {t('Settings.LanguageBtn')}
       </Button>
     </ScreenTemplate>
   );

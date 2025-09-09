@@ -8,6 +8,7 @@ This project provides a collection of modular building blocks designed to accele
 - [x] Navigation
 - [x] Multi-language support
 - [x] Mnemonics
+- [x] QR scanning
 - [ ] Environment variables
 - [ ] Context state management
 - [ ] Icons
@@ -15,7 +16,6 @@ This project provides a collection of modular building blocks designed to accele
 - [ ] Async storage for settings
 - [ ] Biometrics
 - [ ] Custom fonts
-- [ ] QR scanning
 - [ ] Clipboard copy/pasting
 - [ ] Animations
 - [ ] Loading indicators

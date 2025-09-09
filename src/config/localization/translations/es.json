@@ -9,7 +9,10 @@
       "Login": "Acceso"
     }
   },
+  "Settings": {
+    "LanguageBtn": "Cambiar idioma"
+  },
   "Home": {
-    "LanguageBtn": "Cambiar Idioma"
+    "ScannerBtn": "Escanear código QR"
   }
 }

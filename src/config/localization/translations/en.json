@@ -9,7 +9,10 @@
       "Login": "Login"
     }
   },
-  "Home": {
+  "Settings": {
     "LanguageBtn": "Change Language"
+  },
+  "Home": {
+    "ScannerBtn": "Scan QR Code"
   }
 }
