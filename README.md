@@ -10,7 +10,7 @@ This project provides a collection of modular building blocks designed to accele
 - [x] Mnemonics
 - [x] QR scanning
 - [x] Icons
-- [ ] Environment variables
+- [x] Environment variables
 - [ ] Context state management
 - [ ] Secure storage for sensitive data
 - [ ] Async storage for settings
