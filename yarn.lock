@@ -1027,6 +1027,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@breeztech/react-native-breez-sdk-liquid@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@breeztech/react-native-breez-sdk-liquid/-/react-native-breez-sdk-liquid-0.11.2.tgz#4b428515921923904d2342cb6e13a0ae40105ebd"
+  integrity sha512-RfJOk+o6RIKmWKtUL/cLCp3ajjzNXqwdF+4Xax7vEUq6y/hzGb/VEO7EIfS0BM8lVvS8+cE3BaDb18hsefpONw==
+
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.7.0.tgz#607084630c6c033992a082de6e6fbc1a8b52175a"
