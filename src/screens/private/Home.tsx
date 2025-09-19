@@ -6,12 +6,10 @@ import { useTranslation } from 'react-i18next';
 
 import { ScreenTemplate } from '../../atoms';
 import { Routes } from '../../navigation/types';
-import { TEST } from '@env';
 
 const Home = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
-  console.log('var', TEST);
 
   return (
     <ScreenTemplate>
