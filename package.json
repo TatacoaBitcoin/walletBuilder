@@ -1,5 +1,5 @@
 {
-  "name": "multiWallet",
+  "name": "multiwalletpocpoc",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@breeztech/react-native-breez-sdk-liquid": "^0.11.2",
     "@react-native-vector-icons/material-design-icons": "^12.3.0",
     "@react-navigation/bottom-tabs": "^7.4.6",
     "@react-navigation/elements": "^2.6.3",
