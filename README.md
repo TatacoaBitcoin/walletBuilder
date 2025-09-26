@@ -11,6 +11,8 @@ This project provides a collection of modular building blocks designed to accele
 - [x] QR scanning
 - [x] Icons
 - [x] Environment variables
+- [x] QR code generation
+- [x] SVG files support
 - [ ] Context state management
 - [ ] Secure storage for sensitive data
 - [ ] Async storage for settings
@@ -21,6 +23,6 @@ This project provides a collection of modular building blocks designed to accele
 - [ ] Loading indicators
 - [ ] Error modals
 - [ ] Multi-currency support
-- [ ] QR code generation
-- [ ] SVG file support
-- [ ] gradient support
+- [ ] Gradient support
+- [ ] Share screen capture
+- [ ] Prevent screen capture
