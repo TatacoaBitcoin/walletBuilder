@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { ScreenTemplate } from '../../atoms';
 import { Routes } from '../../navigation/types';
 import { TEST } from '@env';
+import Logo from '../../../assets/images/btc.svg';
 
 const Home = () => {
   const navigation = useNavigation();
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <ScreenTemplate>
       <Text>Home</Text>
+      <Logo width={50} height={50} />
       <Button onPress={() => navigation.navigate(Routes.Scanner)}>
         {t('Home.ScannerBtn')}
       </Button>
