@@ -21,3 +21,6 @@ This project provides a collection of modular building blocks designed to accele
 - [ ] Loading indicators
 - [ ] Error modals
 - [ ] Multi-currency support
+- [ ] QR code generation
+- [ ] SVG file support
+- [ ] gradient support
