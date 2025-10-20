@@ -41,5 +41,7 @@ export const usePreferences = () => {
     [i18n],
   );
 
+  const loadPreferences = () => {};
+
   return { currency, language, currencySetup, languageSetup };
 };
