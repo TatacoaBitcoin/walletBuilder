@@ -18,7 +18,7 @@ This project provides a collection of modular building blocks designed to accele
 - [ ] Async storage for settings
 - [ ] Biometrics
 - [ ] Custom fonts
-- [ ] Clipboard copy/pasting
+- [x] Clipboard copy/pasting
 - [ ] Animations
 - [ ] Loading indicators
 - [ ] Error modals
