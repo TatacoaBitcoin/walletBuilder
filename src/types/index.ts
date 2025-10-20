@@ -9,3 +9,14 @@ export enum Languages {
   zh = 'zh',
   es = 'es',
 }
+
+export type Currency = {
+  decimals: boolean;
+  label: string;
+  value: string;
+};
+
+export enum StorageKeys {
+  CURRENCY = 'CURRENCY',
+  LANGUAGE = 'LANGUAGE',
+}
