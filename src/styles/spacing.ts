@@ -3,6 +3,7 @@ const BASE = 4;
 export const padding = {
   xs: BASE,
   sm: BASE * 2,
+  smd: BASE * 3,
   md: BASE * 4,
   lg: BASE * 6,
   xl: BASE * 8,
@@ -12,6 +13,7 @@ export const padding = {
 export const margin = {
   xs: BASE,
   sm: BASE * 2,
+  smd: BASE * 3,
   md: BASE * 4,
   lg: BASE * 6,
   xl: BASE * 8,
