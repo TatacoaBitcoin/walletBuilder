@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Currency, Languages, StorageKeys } from '../types';
 import { storeObject, storeString } from '../utils/storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const DEFAULT_CURRENCY: Currency = {
   decimals: true,
@@ -41,7 +42,36 @@ export const usePreferences = () => {
     [i18n],
   );
 
-  const loadPreferences = () => {};
+  const loadPreferences = useCallback(async () => {
+    setIsLoadingPreferences(true);
+    try {
+      const value = await AsyncStorage.multiGet([
+        StorageKeys.CURRENCY,
+        StorageKeys.LANGUAGE,
+      ]);
+      if (value[0][1]) {
+        languageSetup(value[1][1]);
+        setCurrency(JSON.parse(value[0][1]));
+      } else {
+        setCurrency(DEFAULT_CURRENCY);
+        languageSetup(DEFAULT_LANG);
+      }
+    } catch (error) {
+      console.log('Error reading settings', error);
+    } finally {
+      setIsLoadingPreferences(false);
+    }
+  }, []);
 
-  return { currency, language, currencySetup, languageSetup };
+  useEffect(() => {
+    loadPreferences();
+  }, []);
+
+  return {
+    isloadingPreferences,
+    currency,
+    language,
+    currencySetup,
+    languageSetup,
+  };
 };
