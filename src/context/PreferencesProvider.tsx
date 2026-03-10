@@ -4,6 +4,7 @@ import { Currency, Languages } from '../types';
 import { usePreferences } from '../hooks/usePreferences';
 
 interface PreferencesContextType {
+  isLoadingPreferences: boolean;
   currency: Currency;
   language: Languages;
   currencySetup: (selectedCurrency: Currency) => void;
@@ -16,7 +17,7 @@ const PreferencesContext = createContext<PreferencesContextType | undefined>(
 
 export const PreferencesProvider = ({ children }: { children: ReactNode }) => {
   const {
-    isloadingPreferences,
+    isLoadingPreferences,
     currency,
     language,
     currencySetup,
@@ -24,7 +25,7 @@ export const PreferencesProvider = ({ children }: { children: ReactNode }) => {
   } = usePreferences();
 
   const state = {
-    isloadingPreferences,
+    isLoadingPreferences,
     currency,
     language,
     currencySetup,

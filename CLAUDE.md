@@ -36,7 +36,7 @@ yarn test path/to/file  # Run specific test file
 - Route definitions in `types.ts` with typed param lists for type-safe navigation
 
 ### State Management
-- **PreferencesContext** (`src/context/PrefencesProvider.tsx`) - User preferences (language, currency)
+- **PreferencesContext** (`src/context/PreferencesProvider.tsx`) - User preferences (language, currency)
 - `usePreferencesState()` hook to access context
 - Preferences persisted via AsyncStorage (`src/utils/storage.ts`)
 

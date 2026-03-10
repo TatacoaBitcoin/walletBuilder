@@ -16,7 +16,7 @@ const DEFAULT_LANG = Languages.en;
 export const usePreferences = () => {
   const { i18n } = useTranslation(); //i18n instance
 
-  const [isloadingPreferences, setIsLoadingPreferences] = useState(false);
+  const [isLoadingPreferences, setIsLoadingPreferences] = useState(false);
   const [currency, setCurrency] = useState<Currency>(DEFAULT_CURRENCY);
   const [language, setLanguage] = useState<Languages>(DEFAULT_LANG);
 
@@ -25,7 +25,7 @@ export const usePreferences = () => {
       setCurrency(selectedCurrency);
       await storeObject(StorageKeys.CURRENCY, selectedCurrency);
     } catch (error) {
-      console.log('Error setting currency preference', error);
+      console.warn('Error setting currency preference', error);
     }
   }, []);
 
@@ -36,7 +36,7 @@ export const usePreferences = () => {
         await storeString(StorageKeys.LANGUAGE, value);
         await i18n.changeLanguage(value); //changes the app language
       } catch (error) {
-        console.log('Error setting language preference', error);
+        console.warn('Error setting language preference', error);
       }
     },
     [i18n],
@@ -60,7 +60,7 @@ export const usePreferences = () => {
         await i18n.changeLanguage(languageEntry[1]);
       }
     } catch (error) {
-      console.log('Error reading settings', error);
+      console.warn('Error reading settings', error);
     } finally {
       setIsLoadingPreferences(false);
     }
@@ -71,7 +71,7 @@ export const usePreferences = () => {
   }, [loadPreferences]);
 
   return {
-    isloadingPreferences,
+    isLoadingPreferences,
     currency,
     language,
     currencySetup,

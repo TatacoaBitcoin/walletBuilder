@@ -7,6 +7,14 @@ import { Home, Settings } from '../screens';
 
 const Tab = createBottomTabNavigator();
 
+const WalletIcon = ({ color, size }: { color: string; size: number }) => (
+  <Icon name="wallet-bifold" color={color} size={size} />
+);
+
+const CogIcon = ({ color, size }: { color: string; size: number }) => (
+  <Icon name="cog" color={color} size={size} />
+);
+
 export const TabsFlow = () => {
   const { t } = useTranslation();
 
@@ -20,9 +28,7 @@ export const TabsFlow = () => {
         component={Home}
         options={{
           tabBarLabel: t('navigation.privateFlow.Home'),
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="wallet-bifold" color={color} size={size} />
-          ),
+          tabBarIcon: WalletIcon,
         }}
       />
       <Tab.Screen
@@ -30,9 +36,7 @@ export const TabsFlow = () => {
         component={Settings}
         options={{
           tabBarLabel: t('navigation.privateFlow.Settings'),
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="cog" color={color} size={size} />
-          ),
+          tabBarIcon: CogIcon,
         }}
       />
     </Tab.Navigator>

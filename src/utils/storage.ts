@@ -4,16 +4,16 @@ export const storeString = async (key: string, value: string) => {
   try {
     await AsyncStorage.setItem(key, value);
   } catch (e) {
-    console.log('storage error', e);
+    console.warn('storage error', e);
   }
 };
 
-export const storeObject = async (key: string, value: Object) => {
+export const storeObject = async (key: string, value: Record<string, unknown>) => {
   try {
     const jsonValue = JSON.stringify(value);
     await AsyncStorage.setItem(key, jsonValue);
   } catch (e) {
-    console.log('storage error', e);
+    console.warn('storage error', e);
   }
 };
 
@@ -27,7 +27,7 @@ export const getStoredString = async (key: string) => {
 
     return value;
   } catch (e) {
-    console.log('storage error', e);
+    console.warn('storage error', e);
   }
 };
 
@@ -41,6 +41,6 @@ export const getStoredObject = async (key: string) => {
 
     return JSON.parse(jsonValue);
   } catch (e) {
-    console.log('storage error', e);
+    console.warn('storage error', e);
   }
 };

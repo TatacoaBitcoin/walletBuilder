@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Text } from 'react-native';
 import { Button } from '@react-navigation/elements';
 
 import { ScreenTemplate } from '../../atoms';
@@ -15,5 +15,3 @@ const Welcome = ({ navigation }: PublicFlowScreenProps<Routes.Welcome>) => {
 };
 
 export { Welcome };
-
-const styles = StyleSheet.create({});
