@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Button } from '@react-navigation/elements';
 import { useTranslation } from 'react-i18next';
 
@@ -13,17 +13,23 @@ const Settings = () => {
 
   return (
     <ScreenTemplate>
-      <Text>Settings</Text>
-      <Button onPress={() => navigation.navigate(Routes.Language)}>
-        {t('Settings.LanguageBtn')}
-      </Button>
-      <Button onPress={() => navigation.navigate(Routes.Currency)}>
-        {t('Settings.CurrencyBtn')}
-      </Button>
+      <View style={styles.container}>
+        <Button onPress={() => navigation.navigate(Routes.Language)}>
+          {t('Settings.LanguageBtn')}
+        </Button>
+        <Button onPress={() => navigation.navigate(Routes.Currency)}>
+          {t('Settings.CurrencyBtn')}
+        </Button>
+      </View>
     </ScreenTemplate>
   );
 };
 
 export { Settings };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    gap: 10,
+  },
+});
