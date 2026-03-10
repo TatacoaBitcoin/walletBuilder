@@ -20,3 +20,5 @@ export enum StorageKeys {
   CURRENCY = 'CURRENCY',
   LANGUAGE = 'LANGUAGE',
 }
+
+export type ModalType = 'success' | 'error' | 'info';

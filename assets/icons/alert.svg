@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="640"
+   height="640"
+   viewBox="-0.5 0 20 20"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="alert-2-svgrepo-com.svg"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="currentColor"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.295"
+     inkscape:cx="237.28814"
+     inkscape:cy="328.81356"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6" />
+  <path
+     d="m 8.3809,13.9 c 0,-0.1479 0.0292,-0.2944 0.0861,-0.4309 0.057,-0.1366 0.1403,-0.2605 0.2454,-0.3646 0.1051,-0.1041 0.2298,-0.1864 0.3668,-0.2421 0.1371,-0.0557 0.2837,-0.0837 0.4317,-0.0824 0.2182,0.004 0.4304,0.0721 0.6101,0.196 0.1796,0.1239 0.3189,0.2981 0.4001,0.5006 0.0813,0.2026 0.1009,0.4246 0.0567,0.6383 -0.0443,0.2137 -0.1506,0.4096 -0.3056,0.5633 -0.155,0.1536 -0.3518,0.2581 -0.5659,0.3005 C 9.4922,15.0211 9.2703,14.9994 9.0685,14.9163 8.8666,14.8333 8.6938,14.6926 8.5715,14.5118 8.4492,14.3311 8.3829,14.1183 8.3809,13.9 Z M 8.7408,11.17 8.6008,5.95001 C 8.5875,5.82453 8.6008,5.69766 8.6398,5.57764 8.6787,5.45761 8.7424,5.3471 8.8268,5.2533 8.9112,5.15949 9.0144,5.08449 9.1296,5.03314 9.2449,4.9818 9.3697,4.95526 9.4958,4.95526 c 0.1262,0 0.251,0.02654 0.3663,0.07788 0.1152,0.05135 0.2184,0.12635 0.3028,0.22016 0.0844,0.0938 0.1481,0.20431 0.187,0.32434 0.039,0.12002 0.0523,0.24689 0.039,0.37237 l -0.13,5.21999 c 0,0.2015 -0.08,0.3949 -0.2226,0.5374 C 9.8958,11.8499 9.7024,11.93 9.5009,11.93 9.2993,11.93 9.106,11.8499 8.9635,11.7074 8.821,11.5649 8.7408,11.3715 8.7408,11.17 Z"
+     fill="currentColor"
+     id="path2" />
+  <path
+     d="m 9.5,19.25 c 5.1086,0 9.25,-4.1414 9.25,-9.25 0,-5.10863 -4.1414,-9.25 -9.25,-9.25 -5.10863,0 -9.25,4.14137 -9.25,9.25 0,5.1086 4.14137,9.25 9.25,9.25 z"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path4" />
+</svg>

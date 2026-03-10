@@ -4,14 +4,23 @@ import 'react-native-get-random-values';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import './i18n.config';
-import { PublicFlow } from './src/navigation/PublicFlow';
-import { PrivateFlow } from './src/navigation/PrivateFlow';
+import { useResponseModal } from './src/context/ModalProvider';
+import { StackFlow } from './src/navigation/StackFlow';
+import { ResponseModal } from './src/molecules';
 
 const App = () => {
+  const { state, hideModal } = useResponseModal();
+
   return (
     <NavigationContainer>
       <SafeAreaProvider>
-        {false ? <PublicFlow /> : <PrivateFlow />}
+        <StackFlow />
+        <ResponseModal
+          visible={state.visible}
+          type={state.type}
+          message={state.message}
+          onClose={hideModal}
+        />
       </SafeAreaProvider>
     </NavigationContainer>
   );

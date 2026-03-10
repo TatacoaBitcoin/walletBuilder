@@ -15,27 +15,22 @@ export enum Routes {
   Currency = 'Currency',
 }
 
-export type PrivateFlowParamList = {
+export type StackFlowParamList = {
+  // Public
+  Welcome: undefined;
+  Login: undefined;
+  // Private
   Main: undefined;
   Language: undefined;
   Currency: undefined;
   Scanner: undefined;
 };
 
-export type PublicFlowParamList = {
-  Welcome: undefined;
-  Login: undefined;
-};
-
-export type PrivateFlowScreenProps<T extends keyof PrivateFlowParamList> =
-  NativeStackScreenProps<PrivateFlowParamList, T>;
-
-export type PublicFlowScreenProps<T extends keyof PublicFlowParamList> =
-  NativeStackScreenProps<PublicFlowParamList, T>;
+export type PublicFlowScreenProps<T extends keyof StackFlowParamList> =
+  NativeStackScreenProps<StackFlowParamList, T>;
 
 declare global {
   namespace ReactNavigation {
-    interface RootParamList extends PrivateFlowParamList {}
-    interface RootParamList extends PublicFlowParamList {}
+    interface RootParamList extends StackFlowParamList {}
   }
 }
