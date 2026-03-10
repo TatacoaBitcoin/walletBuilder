@@ -20,7 +20,7 @@ This project provides a collection of modular building blocks designed to accele
 - [x] Custom fonts
 - [x] Clipboard copy/pasting
 - [x] Animations
-- [ ] Loading indicators
+- [x] Loading indicators
 - [ ] Error modals
 - [ ] Multi-currency support
 - [x] Gradient support
