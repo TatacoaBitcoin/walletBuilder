@@ -1,17 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useTranslation } from 'react-i18next';
 
 import { margin, padding } from '../../../styles/spacing';
 import { LANGUAGES_LIST } from '../../../config/localization/languages';
+import { usePreferencesState } from '../../../context/PrefencesProvider';
+import { Languages } from '../../../types';
 
 const Language = () => {
   const navigation = useNavigation();
-  const { i18n } = useTranslation();
+  const { languageSetup } = usePreferencesState();
 
   const onPress = (value: string) => {
-    i18n.changeLanguage(value);
+    languageSetup(value as Languages);
     navigation.goBack();
   };
 

@@ -49,23 +49,26 @@ export const usePreferences = () => {
         StorageKeys.CURRENCY,
         StorageKeys.LANGUAGE,
       ]);
-      if (value[0][1]) {
-        languageSetup(value[1][1]);
-        setCurrency(JSON.parse(value[0][1]));
-      } else {
-        setCurrency(DEFAULT_CURRENCY);
-        languageSetup(DEFAULT_LANG);
+      const [currencyEntry, languageEntry] = value;
+
+      if (currencyEntry[1]) {
+        setCurrency(JSON.parse(currencyEntry[1]));
+      }
+
+      if (languageEntry[1]) {
+        setLanguage(languageEntry[1] as Languages);
+        await i18n.changeLanguage(languageEntry[1]);
       }
     } catch (error) {
       console.log('Error reading settings', error);
     } finally {
       setIsLoadingPreferences(false);
     }
-  }, []);
+  }, [i18n]);
 
   useEffect(() => {
     loadPreferences();
-  }, []);
+  }, [loadPreferences]);
 
   return {
     isloadingPreferences,
