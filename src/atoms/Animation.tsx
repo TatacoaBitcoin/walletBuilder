@@ -1,20 +1,43 @@
-import React, { useRef } from 'react';
-import LottieView from 'lottie-react-native';
+import React from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
+import LottieView, { LottieViewProps } from 'lottie-react-native';
 
-import success from '../../assets/animations/Success.json';
+interface AnimationProps {
+  source: LottieViewProps['source'];
+  autoPlay?: boolean;
+  loop?: boolean;
+  speed?: number;
+  style?: StyleProp<ViewStyle>;
+  resizeMode?: 'cover' | 'contain' | 'center';
+  onAnimationFinish?: (isCancelled: boolean) => void;
+}
 
-const Animation = () => {
-  const animationRef = useRef<LottieView>(null);
-
-  return (
-    <LottieView
-      ref={animationRef}
-      source={success}
-      autoPlay
-      loop
-      style={{ width: 200, height: 200 }}
-    />
-  );
-};
+const Animation = React.forwardRef<LottieView, AnimationProps>(
+  (
+    {
+      source,
+      autoPlay = true,
+      loop = false,
+      speed,
+      style = { width: 200, height: 200 },
+      resizeMode,
+      onAnimationFinish,
+    },
+    ref,
+  ) => {
+    return (
+      <LottieView
+        ref={ref}
+        source={source}
+        autoPlay={autoPlay}
+        loop={loop}
+        speed={speed}
+        style={style}
+        resizeMode={resizeMode}
+        onAnimationFinish={onAnimationFinish}
+      />
+    );
+  },
+);
 
 export { Animation };
