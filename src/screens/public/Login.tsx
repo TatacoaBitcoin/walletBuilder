@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Text } from 'react-native';
 
 import { ScreenTemplate } from '../../atoms';
 
@@ -12,5 +12,3 @@ const Login = () => {
 };
 
 export { Login };
-
-const styles = StyleSheet.create({});

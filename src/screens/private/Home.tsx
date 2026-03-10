@@ -6,26 +6,22 @@ import { useTranslation } from 'react-i18next';
 
 import { QrCode, ScreenTemplate } from '../../atoms';
 import { Routes } from '../../navigation/types';
-import { TEST } from '@env';
 import Logo from '../../../assets/images/btc.svg';
 import { copyToClipboard, getFromClipboard } from '../../utils/clipboard';
 import { getStoredString, storeString } from '../../utils/storage';
-import { usePreferencesState } from '../../context/PrefencesProvider';
+import { usePreferencesState } from '../../context/PreferencesProvider';
 
 const Home = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
   const { currency } = usePreferencesState();
-  console.log('var', TEST);
 
   const getClipboard = async () => {
-    const clipboard = await getFromClipboard();
-    console.log(clipboard);
+    await getFromClipboard();
   };
 
   const getString = async () => {
-    const response = await getStoredString('box');
-    console.log(response);
+    await getStoredString('box');
   };
 
   return (

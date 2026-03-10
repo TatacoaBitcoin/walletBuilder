@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { margin, padding } from '../../../styles/spacing';
 import { CURRENCIES } from '../../../config/localization/currencies';
-import { usePreferencesState } from '../../../context/PrefencesProvider';
+import { usePreferencesState } from '../../../context/PreferencesProvider';
 import { Currency as CurrencyType } from '../../../types';
 
 const Currency = () => {

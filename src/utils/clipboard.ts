@@ -12,6 +12,6 @@ export const getFromClipboard = async () => {
     const content = await Clipboard.getString();
     return content;
   } catch (err) {
-    console.log('error reading clipboard', err);
+    console.warn('error reading clipboard', err);
   }
 };

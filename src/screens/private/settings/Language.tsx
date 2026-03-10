@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { margin, padding } from '../../../styles/spacing';
 import { LANGUAGES_LIST } from '../../../config/localization/languages';
-import { usePreferencesState } from '../../../context/PrefencesProvider';
+import { usePreferencesState } from '../../../context/PreferencesProvider';
 import { Languages } from '../../../types';
 
 const Language = () => {
