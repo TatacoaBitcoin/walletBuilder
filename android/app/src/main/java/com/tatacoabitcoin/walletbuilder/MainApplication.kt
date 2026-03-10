@@ -1,4 +1,4 @@
-package com.multiwallet
+package com.tatacoabitcoin.walletbuilder
 
 import android.app.Application
 import com.facebook.react.PackageList
