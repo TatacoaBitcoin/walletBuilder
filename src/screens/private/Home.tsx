@@ -10,6 +10,7 @@ import Logo from '../../../assets/images/btc.svg';
 import { copyToClipboard, getFromClipboard } from '../../utils/clipboard';
 import { getStoredString, storeString } from '../../utils/storage';
 import { usePreferencesState } from '../../context/PreferencesProvider';
+import fonts from '../../styles/fonts';
 
 const Home = () => {
   const navigation = useNavigation();
@@ -27,7 +28,7 @@ const Home = () => {
   return (
     <ScreenTemplate>
       <View style={styles.container}>
-        <Text>Home</Text>
+        <Text style={{ fontFamily: fonts.bold }}>Home</Text>
         <Text>Currency: {currency.label}</Text>
         <Logo width={50} height={50} />
         <QrCode data={'https://www.google.com'} />
