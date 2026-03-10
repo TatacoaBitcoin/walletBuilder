@@ -9,21 +9,30 @@ import { Routes } from '../../navigation/types';
 import { TEST } from '@env';
 import Logo from '../../../assets/images/btc.svg';
 import { copyToClipboard, getFromClipboard } from '../../utils/clipboard';
+import { getStoredString, storeString } from '../../utils/storage';
+import { usePreferencesState } from '../../context/PrefencesProvider';
 
 const Home = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
+  const { currency } = usePreferencesState();
   console.log('var', TEST);
 
-  const test = async () => {
+  const getClipboard = async () => {
     const clipboard = await getFromClipboard();
     console.log(clipboard);
+  };
+
+  const getString = async () => {
+    const response = await getStoredString('box');
+    console.log(response);
   };
 
   return (
     <ScreenTemplate>
       <View style={styles.container}>
         <Text>Home</Text>
+        <Text>Currency: {currency.label}</Text>
         <Logo width={50} height={50} />
         <QrCode data={'https://www.google.com'} />
         <Button onPress={() => navigation.navigate(Routes.Scanner)}>
@@ -32,7 +41,11 @@ const Home = () => {
         <Button onPress={() => copyToClipboard('Test')}>
           Copy to clipboard
         </Button>
-        <Button onPress={test}>Get from clipboard</Button>
+        <Button onPress={getClipboard}>Get from clipboard</Button>
+        <Button onPress={() => storeString('box', 'test2!')}>
+          Store to storage
+        </Button>
+        <Button onPress={getString}>Get from storage</Button>
       </View>
     </ScreenTemplate>
   );

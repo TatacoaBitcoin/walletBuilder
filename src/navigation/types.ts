@@ -12,11 +12,13 @@ export enum Routes {
   Scanner = 'Scanner',
   // Settings
   Language = 'Language',
+  Currency = 'Currency',
 }
 
 export type PrivateFlowParamList = {
   Main: undefined;
   Language: undefined;
+  Currency: undefined;
   Scanner: undefined;
 };
 

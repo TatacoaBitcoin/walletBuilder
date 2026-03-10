@@ -10,7 +10,8 @@
     }
   },
   "Settings": {
-    "LanguageBtn": "Cambiar idioma"
+    "LanguageBtn": "Cambiar idioma",
+    "CurrencyBtn": "Cambiar moneda"
   },
   "Home": {
     "ScannerBtn": "Escanear código QR"

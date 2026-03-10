@@ -3,26 +3,26 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { margin, padding } from '../../../styles/spacing';
-import { LANGUAGES_LIST } from '../../../config/localization/languages';
+import { CURRENCIES } from '../../../config/localization/currencies';
 import { usePreferencesState } from '../../../context/PrefencesProvider';
-import { Languages } from '../../../types';
+import { Currency as CurrencyType } from '../../../types';
 
-const Language = () => {
+const Currency = () => {
   const navigation = useNavigation();
-  const { languageSetup } = usePreferencesState();
+  const { currencySetup } = usePreferencesState();
 
-  const onPress = (value: string) => {
-    languageSetup(value as Languages);
+  const onPress = (item: CurrencyType) => {
+    currencySetup(item);
     navigation.goBack();
   };
 
   return (
     <View style={styles.container}>
-      {LANGUAGES_LIST.map(item => (
+      {CURRENCIES.map(item => (
         <TouchableOpacity
           key={item.value}
           style={styles.itemContainer}
-          onPress={() => onPress(item.value)}
+          onPress={() => onPress(item)}
         >
           <Text style={styles.itemText}>{item.label}</Text>
         </TouchableOpacity>
@@ -31,7 +31,7 @@ const Language = () => {
   );
 };
 
-export { Language };
+export { Currency };
 
 const styles = StyleSheet.create({
   container: {
