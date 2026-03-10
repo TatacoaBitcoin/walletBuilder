@@ -15,14 +15,14 @@ This project provides a collection of modular building blocks designed to accele
 - [x] SVG files support
 - [ ] Context state management
 - [ ] Secure storage for sensitive data
-- [ ] Async storage for settings
+- [x] Async storage for settings
 - [ ] Biometrics
-- [ ] Custom fonts
+- [x] Custom fonts
 - [x] Clipboard copy/pasting
-- [ ] Animations
+- [x] Animations
 - [ ] Loading indicators
 - [ ] Error modals
 - [ ] Multi-currency support
-- [ ] Gradient support
+- [x] Gradient support
 - [ ] Share screen capture
 - [ ] Prevent screen capture
