@@ -21,7 +21,7 @@ This project provides a collection of modular building blocks designed to accele
 - [x] Clipboard copy/pasting
 - [x] Animations
 - [x] Loading indicators
-- [ ] Error modals
+- [x] Success/Error/Info modals
 - [ ] Multi-currency support
 - [x] Gradient support
 - [ ] Share screen capture
