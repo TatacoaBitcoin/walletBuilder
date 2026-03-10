@@ -10,7 +10,8 @@
     }
   },
   "Settings": {
-    "LanguageBtn": "Change Language"
+    "LanguageBtn": "Change Language",
+    "CurrencyBtn": "Change Currency"
   },
   "Home": {
     "ScannerBtn": "Scan QR Code"

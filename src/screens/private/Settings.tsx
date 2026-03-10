@@ -17,6 +17,9 @@ const Settings = () => {
       <Button onPress={() => navigation.navigate(Routes.Language)}>
         {t('Settings.LanguageBtn')}
       </Button>
+      <Button onPress={() => navigation.navigate(Routes.Currency)}>
+        {t('Settings.CurrencyBtn')}
+      </Button>
     </ScreenTemplate>
   );
 };

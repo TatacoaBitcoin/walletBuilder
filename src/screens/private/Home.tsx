@@ -10,10 +10,12 @@ import { TEST } from '@env';
 import Logo from '../../../assets/images/btc.svg';
 import { copyToClipboard, getFromClipboard } from '../../utils/clipboard';
 import { getStoredString, storeString } from '../../utils/storage';
+import { usePreferencesState } from '../../context/PrefencesProvider';
 
 const Home = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
+  const { currency } = usePreferencesState();
   console.log('var', TEST);
 
   const getClipboard = async () => {
@@ -30,6 +32,7 @@ const Home = () => {
     <ScreenTemplate>
       <View style={styles.container}>
         <Text>Home</Text>
+        <Text>Currency: {currency.label}</Text>
         <Logo width={50} height={50} />
         <QrCode data={'https://www.google.com'} />
         <Button onPress={() => navigation.navigate(Routes.Scanner)}>
