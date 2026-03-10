@@ -8,11 +8,13 @@ import { ScreenTemplate } from '../../atoms';
 import { Routes } from '../../navigation/types';
 import { usePreferencesState } from '../../context/PreferencesProvider';
 import fonts from '../../styles/fonts';
+import { useResponseModal } from '../../context/ModalProvider';
 
 const Home = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
   const { currency } = usePreferencesState();
+  const { showModal } = useResponseModal();
 
   return (
     <ScreenTemplate>
@@ -21,6 +23,9 @@ const Home = () => {
         <Text>Currency: {currency.label}</Text>
         <Button onPress={() => navigation.navigate(Routes.Scanner)}>
           {t('Home.ScannerBtn')}
+        </Button>
+        <Button onPress={() => showModal('success', 'This is a success!')}>
+          Show Modal
         </Button>
       </View>
     </ScreenTemplate>

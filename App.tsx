@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import './i18n.config';
 import { useResponseModal } from './src/context/ModalProvider';
 import { StackFlow } from './src/navigation/StackFlow';
+import { ResponseModal } from './src/molecules';
 
 const App = () => {
   const { state, hideModal } = useResponseModal();
@@ -14,6 +15,12 @@ const App = () => {
     <NavigationContainer>
       <SafeAreaProvider>
         <StackFlow />
+        <ResponseModal
+          visible={state.visible}
+          type={state.type}
+          message={state.message}
+          onClose={hideModal}
+        />
       </SafeAreaProvider>
     </NavigationContainer>
   );

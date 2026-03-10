@@ -15,18 +15,21 @@ interface Props {
   onClose: () => void;
 }
 
+const modalConfig: Record<ModalType, { icon: keyof typeof Icons; color: string }> = {
+  success: { icon: 'Check', color: Colors.success },
+  error: { icon: 'Cross', color: Colors.error },
+  info: { icon: 'Alert', color: Colors.info },
+};
+
 const ResponseModal = ({ visible, type, message, onClose }: Props) => {
-  const isError = type === 'error';
+  const { icon, color } = modalConfig[type];
+  const Icon = Icons[icon];
 
   return (
     <Modal visible={visible} transparent animationType="none">
       <View style={styles.overlay}>
         <View style={styles.container}>
-          {isError ? (
-            <Icons.Cross width={60} height={60} color={'red'} />
-          ) : (
-            <Icons.Check width={60} height={60} color={'green'} />
-          )}
+          <Icon width={60} height={60} color={color} />
           <Text style={styles.message}>{message?.toString()}</Text>
           <Button onPress={onClose}>Accept</Button>
         </View>

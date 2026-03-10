@@ -6,4 +6,5 @@ export const Colors = {
   black: 'black',
   error: 'red',
   success: 'green',
+  info: 'blue',
 };
