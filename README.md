@@ -25,3 +25,4 @@ This project provides a collection of modular building blocks designed to accele
 - [x] Gradient support
 - [ ] Share screen capture
 - [x] Prevent screen capture
+- [x] Light/Dark theme
