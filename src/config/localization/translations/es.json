@@ -11,7 +11,11 @@
   },
   "Settings": {
     "LanguageBtn": "Cambiar idioma",
-    "CurrencyBtn": "Cambiar moneda"
+    "CurrencyBtn": "Cambiar moneda",
+    "ThemeLabel": "Tema",
+    "ThemeSystem": "Sistema",
+    "ThemeLight": "Claro",
+    "ThemeDark": "Oscuro"
   },
   "Home": {
     "ScannerBtn": "Escanear código QR"

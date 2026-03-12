@@ -1,6 +1,6 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 
-import { Currency, Languages } from '../types';
+import { Currency, Languages, ThemeMode } from '../types';
 import { usePreferences } from '../hooks/usePreferences';
 
 interface PreferencesContextType {
@@ -9,6 +9,8 @@ interface PreferencesContextType {
   language: Languages;
   currencySetup: (selectedCurrency: Currency) => void;
   languageSetup: (value: Languages) => void;
+  themeMode: ThemeMode;
+  themeSetup: (value: ThemeMode) => void;
 }
 
 const PreferencesContext = createContext<PreferencesContextType | undefined>(
@@ -22,6 +24,8 @@ export const PreferencesProvider = ({ children }: { children: ReactNode }) => {
     language,
     currencySetup,
     languageSetup,
+    themeMode,
+    themeSetup,
   } = usePreferences();
 
   const state = {
@@ -30,6 +34,8 @@ export const PreferencesProvider = ({ children }: { children: ReactNode }) => {
     language,
     currencySetup,
     languageSetup,
+    themeMode,
+    themeSetup,
   };
 
   return (

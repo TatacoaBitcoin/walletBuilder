@@ -6,10 +6,12 @@ import { margin, padding } from '../../../styles/spacing';
 import { CURRENCIES } from '../../../config/localization/currencies';
 import { usePreferencesState } from '../../../context/PreferencesProvider';
 import { Currency as CurrencyType } from '../../../types';
+import { useThemeColors } from '../../../hooks/useThemeColors';
 
 const Currency = () => {
   const navigation = useNavigation();
   const { currencySetup } = usePreferencesState();
+  const colors = useThemeColors();
 
   const onPress = (item: CurrencyType) => {
     currencySetup(item);
@@ -21,10 +23,12 @@ const Currency = () => {
       {CURRENCIES.map(item => (
         <TouchableOpacity
           key={item.value}
-          style={styles.itemContainer}
+          style={[styles.itemContainer, { borderBottomColor: colors.border }]}
           onPress={() => onPress(item)}
         >
-          <Text style={styles.itemText}>{item.label}</Text>
+          <Text style={[styles.itemText, { color: colors.textPrimary }]}>
+            {item.label}
+          </Text>
         </TouchableOpacity>
       ))}
     </View>
@@ -39,7 +43,6 @@ const styles = StyleSheet.create({
   },
   itemContainer: {
     marginBottom: margin.md,
-    borderBottomColor: 'black',
     borderBottomWidth: 1,
   },
   itemText: {

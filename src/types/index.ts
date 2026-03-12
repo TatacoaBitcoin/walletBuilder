@@ -21,6 +21,13 @@ export type Currency = {
 export enum StorageKeys {
   CURRENCY = 'CURRENCY',
   LANGUAGE = 'LANGUAGE',
+  THEME = 'THEME',
+}
+
+export enum ThemeMode {
+  system = 'system',
+  light = 'light',
+  dark = 'dark',
 }
 
 export enum SecureStorageKeys {
