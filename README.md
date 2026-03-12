@@ -13,16 +13,15 @@ This project provides a collection of modular building blocks designed to accele
 - [x] Environment variables
 - [x] QR code generation
 - [x] SVG files support
-- [ ] Context state management
-- [ ] Secure storage for sensitive data
+- [x] Context state management
+- [x] Secure storage for sensitive data
 - [x] Async storage for settings
-- [ ] Biometrics
+- [x] Biometrics
 - [x] Custom fonts
 - [x] Clipboard copy/pasting
 - [x] Animations
 - [x] Loading indicators
 - [x] Success/Error/Info modals
-- [ ] Multi-currency support
 - [x] Gradient support
 - [ ] Share screen capture
-- [ ] Prevent screen capture
+- [x] Prevent screen capture
