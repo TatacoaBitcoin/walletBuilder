@@ -5,7 +5,7 @@ import { Button } from '@react-navigation/elements';
 import { ModalType } from '../../types';
 import { fontSize, margin } from '../../styles/spacing';
 import fonts from '../../styles/fonts';
-import { Colors } from '../../styles/colors';
+import { useThemeColors } from '../../hooks/useThemeColors';
 import Icons from '../../../assets/icons';
 
 interface Props {
@@ -15,22 +15,26 @@ interface Props {
   onClose: () => void;
 }
 
-const modalConfig: Record<ModalType, { icon: keyof typeof Icons; color: string }> = {
-  success: { icon: 'Check', color: Colors.success },
-  error: { icon: 'Cross', color: Colors.error },
-  info: { icon: 'Alert', color: Colors.info },
-};
-
 const ResponseModal = ({ visible, type, message, onClose }: Props) => {
+  const colors = useThemeColors();
+
+  const modalConfig: Record<ModalType, { icon: keyof typeof Icons; color: string }> = {
+    success: { icon: 'Check', color: colors.success },
+    error: { icon: 'Cross', color: colors.error },
+    info: { icon: 'Alert', color: colors.info },
+  };
+
   const { icon, color } = modalConfig[type];
   const Icon = Icons[icon];
 
   return (
     <Modal visible={visible} transparent animationType="none">
-      <View style={styles.overlay}>
-        <View style={styles.container}>
+      <View style={[styles.overlay, { backgroundColor: colors.overlay }]}>
+        <View style={[styles.container, { backgroundColor: colors.surface }]}>
           <Icon width={60} height={60} color={color} />
-          <Text style={styles.message}>{message?.toString()}</Text>
+          <Text style={[styles.message, { color: colors.textSecondary }]}>
+            {message?.toString()}
+          </Text>
           <Button onPress={onClose}>Accept</Button>
         </View>
       </View>
@@ -43,7 +47,6 @@ export { ResponseModal };
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
-    backgroundColor: Colors.transparent,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -52,10 +55,8 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',
-    backgroundColor: Colors.white,
   },
   message: {
-    color: Colors.secondary,
     fontSize: fontSize.md,
     marginVertical: margin.lg,
     textAlign: 'center',

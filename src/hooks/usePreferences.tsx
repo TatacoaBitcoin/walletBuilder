@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Currency, Languages, StorageKeys } from '../types';
+import { Currency, Languages, StorageKeys, ThemeMode } from '../types';
 import { storeObject, storeString } from '../utils/storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -12,6 +12,7 @@ const DEFAULT_CURRENCY: Currency = {
 };
 
 const DEFAULT_LANG = Languages.en;
+const DEFAULT_THEME = ThemeMode.system;
 
 export const usePreferences = () => {
   const { i18n } = useTranslation(); //i18n instance
@@ -19,6 +20,7 @@ export const usePreferences = () => {
   const [isLoadingPreferences, setIsLoadingPreferences] = useState(false);
   const [currency, setCurrency] = useState<Currency>(DEFAULT_CURRENCY);
   const [language, setLanguage] = useState<Languages>(DEFAULT_LANG);
+  const [themeMode, setThemeMode] = useState<ThemeMode>(DEFAULT_THEME);
 
   const currencySetup = useCallback(async (selectedCurrency: Currency) => {
     try {
@@ -42,14 +44,24 @@ export const usePreferences = () => {
     [i18n],
   );
 
+  const themeSetup = useCallback(async (value: ThemeMode) => {
+    try {
+      setThemeMode(value);
+      await storeString(StorageKeys.THEME, value);
+    } catch (error) {
+      console.warn('Error setting theme preference', error);
+    }
+  }, []);
+
   const loadPreferences = useCallback(async () => {
     setIsLoadingPreferences(true);
     try {
       const value = await AsyncStorage.multiGet([
         StorageKeys.CURRENCY,
         StorageKeys.LANGUAGE,
+        StorageKeys.THEME,
       ]);
-      const [currencyEntry, languageEntry] = value;
+      const [currencyEntry, languageEntry, themeEntry] = value;
 
       if (currencyEntry[1]) {
         setCurrency(JSON.parse(currencyEntry[1]));
@@ -58,6 +70,10 @@ export const usePreferences = () => {
       if (languageEntry[1]) {
         setLanguage(languageEntry[1] as Languages);
         await i18n.changeLanguage(languageEntry[1]);
+      }
+
+      if (themeEntry[1]) {
+        setThemeMode(themeEntry[1] as ThemeMode);
       }
     } catch (error) {
       console.warn('Error reading settings', error);
@@ -76,5 +92,7 @@ export const usePreferences = () => {
     language,
     currencySetup,
     languageSetup,
+    themeMode,
+    themeSetup,
   };
 };

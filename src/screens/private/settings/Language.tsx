@@ -6,10 +6,12 @@ import { margin, padding } from '../../../styles/spacing';
 import { LANGUAGES_LIST } from '../../../config/localization/languages';
 import { usePreferencesState } from '../../../context/PreferencesProvider';
 import { Languages } from '../../../types';
+import { useThemeColors } from '../../../hooks/useThemeColors';
 
 const Language = () => {
   const navigation = useNavigation();
   const { languageSetup } = usePreferencesState();
+  const colors = useThemeColors();
 
   const onPress = (value: string) => {
     languageSetup(value as Languages);
@@ -21,10 +23,12 @@ const Language = () => {
       {LANGUAGES_LIST.map(item => (
         <TouchableOpacity
           key={item.value}
-          style={styles.itemContainer}
+          style={[styles.itemContainer, { borderBottomColor: colors.border }]}
           onPress={() => onPress(item.value)}
         >
-          <Text style={styles.itemText}>{item.label}</Text>
+          <Text style={[styles.itemText, { color: colors.textPrimary }]}>
+            {item.label}
+          </Text>
         </TouchableOpacity>
       ))}
     </View>
@@ -39,7 +43,6 @@ const styles = StyleSheet.create({
   },
   itemContainer: {
     marginBottom: margin.md,
-    borderBottomColor: 'black',
     borderBottomWidth: 1,
   },
   itemText: {

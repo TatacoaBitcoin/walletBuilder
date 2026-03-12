@@ -10,6 +10,7 @@ import { usePreferencesState } from '../../context/PreferencesProvider';
 import fonts from '../../styles/fonts';
 import { useResponseModal } from '../../context/ModalProvider';
 import useSensitiveScreen from '../../hooks/useSensitiveScreen';
+import { useThemeColors } from '../../hooks/useThemeColors';
 
 const Home = () => {
   useSensitiveScreen();
@@ -17,12 +18,17 @@ const Home = () => {
   const { t } = useTranslation();
   const { currency } = usePreferencesState();
   const { showModal } = useResponseModal();
+  const colors = useThemeColors();
 
   return (
     <ScreenTemplate>
       <View style={styles.container}>
-        <Text style={{ fontFamily: fonts.bold }}>Home</Text>
-        <Text>Currency: {currency.label}</Text>
+        <Text style={{ fontFamily: fonts.bold, color: colors.textPrimary }}>
+          Home
+        </Text>
+        <Text style={{ color: colors.textPrimary }}>
+          Currency: {currency.label}
+        </Text>
         <Button onPress={() => navigation.navigate(Routes.Scanner)}>
           {t('Home.ScannerBtn')}
         </Button>

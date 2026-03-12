@@ -2,15 +2,19 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import QRCodeStyled from 'react-native-qrcode-styled';
 
+import { useThemeColors } from '../hooks/useThemeColors';
+
 type Props = {
   data: string;
 };
 
 const QrCode = ({ data = 'example' }: Props) => {
+  const colors = useThemeColors();
+
   return (
     <QRCodeStyled
       data={data}
-      style={styles.svg}
+      style={[styles.svg, { backgroundColor: colors.surface }]}
       padding={20}
       pieceBorderRadius={'50%'}
       isPiecesGlued
@@ -32,7 +36,6 @@ export { QrCode };
 
 const styles = StyleSheet.create({
   svg: {
-    backgroundColor: 'white',
     borderRadius: 16,
     overflow: 'hidden',
   },
