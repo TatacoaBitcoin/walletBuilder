@@ -23,6 +23,13 @@ export enum StorageKeys {
   LANGUAGE = 'LANGUAGE',
 }
 
+export enum SecureStorageKeys {
+  MNEMONIC = 'MNEMONIC',
+  PRIVATE_KEY = 'PRIVATE_KEY',
+  PIN = 'PIN',
+  WALLET_CREDENTIALS = 'WALLET_CREDENTIALS',
+}
+
 export type ModalType = 'success' | 'error' | 'info';
 
 export type DeviceInfo = {
