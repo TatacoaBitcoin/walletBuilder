@@ -13,7 +13,6 @@ export const useIpAddress = () => {
 
       try {
         const response = await fetch(url);
-        console.log('response', response);
 
         // Check for HTTP errors (e.g., 404, 500)
         if (!response.ok) {
@@ -21,7 +20,6 @@ export const useIpAddress = () => {
         }
 
         const data = await response.json();
-        console.log('data', data);
 
         // Check if component is still mounted before setting state
         if (isMounted) {

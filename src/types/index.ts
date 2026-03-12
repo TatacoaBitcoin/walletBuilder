@@ -52,3 +52,8 @@ export type NetworkInfo = {
   type: NetInfoStateType;
   details: any;
 };
+
+export type Location = {
+  latitude: number;
+  longitude: number;
+};
