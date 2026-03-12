@@ -9,8 +9,10 @@ import { Routes } from '../../navigation/types';
 import { usePreferencesState } from '../../context/PreferencesProvider';
 import fonts from '../../styles/fonts';
 import { useResponseModal } from '../../context/ModalProvider';
+import useSensitiveScreen from '../../hooks/useSensitiveScreen';
 
 const Home = () => {
+  useSensitiveScreen();
   const navigation = useNavigation();
   const { t } = useTranslation();
   const { currency } = usePreferencesState();

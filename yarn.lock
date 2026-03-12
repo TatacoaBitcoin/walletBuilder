@@ -6085,6 +6085,11 @@ react-is@^19.2.3:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-19.2.4.tgz#a080758243c572ccd4a63386537654298c99d135"
   integrity sha512-W+EWGn2v0ApPKgKKCy/7s7WHXkboGcsrXE+2joLyVxkbyVQfO3MUEaUQDHoSmb8TFFrSKYa9mw64WZHNHSDzYA==
 
+react-native-capture-protection@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-capture-protection/-/react-native-capture-protection-2.4.1.tgz#5868982830cf3ba3b58ce526a9d2bee1dee70255"
+  integrity sha512-X2AN+YrgExPRSdjmPpUCanHIUdMnax73z6CfEfcSeZyBkB8AYo3AjNjYOTuTbk1U7HU2UJoz7X5WviShqYQrLQ==
+
 react-native-device-info@^15.0.2:
   version "15.0.2"
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-15.0.2.tgz#c7de1bb6baeb07e1bab70159ad540c5705cb8dc0"
