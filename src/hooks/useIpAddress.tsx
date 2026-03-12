@@ -5,30 +5,24 @@ export const useIpAddress = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let isMounted = true; // Flag to prevent state update on unmounted component
+    const controller = new AbortController();
 
     const fetchIpAddress = async () => {
-      // API endpoint for fetching public IP
       const url = 'http://ip-api.com/json';
 
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, { signal: controller.signal });
 
-        // Check for HTTP errors (e.g., 404, 500)
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-
-        // Check if component is still mounted before setting state
-        if (isMounted) {
-          setIpAddress(data?.query); // The API returns the IP in the 'ip' field
-          setLoading(false);
-        }
+        setIpAddress(data?.query);
+        setLoading(false);
       } catch (e) {
-        console.log('Failed to fetch public IP:', e);
-        if (isMounted) {
+        if (!controller.signal.aborted) {
+          console.log('Failed to fetch public IP:', e);
           setLoading(false);
         }
       }
@@ -36,11 +30,10 @@ export const useIpAddress = () => {
 
     fetchIpAddress();
 
-    // Cleanup function: Set isMounted to false when component unmounts
     return () => {
-      isMounted = false;
+      controller.abort();
     };
-  }, []); // Empty dependency array means this runs only once on mount
+  }, []);
 
   return { ipAddress, loading };
 };

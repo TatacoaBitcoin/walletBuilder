@@ -79,7 +79,7 @@ export const useDeviceInfo = () => {
 
   useEffect(() => {
     fetchInfo();
-  }, []);
+  }, [fetchInfo]);
 
   return deviceInfo;
 };

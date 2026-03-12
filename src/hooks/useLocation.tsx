@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { PermissionsAndroid, Platform } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 
@@ -30,7 +30,7 @@ export const useLocation = () => {
     }
   };
 
-  const getLocation = async () => {
+  const getLocation = useCallback(async () => {
     setIsLoading(true);
     setError(null);
 
@@ -81,7 +81,7 @@ export const useLocation = () => {
       // Configuration options
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 },
     );
-  };
+  }, []);
 
   return {
     location,

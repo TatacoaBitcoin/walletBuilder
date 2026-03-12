@@ -65,8 +65,7 @@ export const useMnemonics: useMnemonicsHook = (
 
   useEffect(() => {
     generate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [generate]);
 
   return { mnemonic, generate };
 };
