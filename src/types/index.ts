@@ -1,3 +1,5 @@
+import { NetInfoStateType } from '@react-native-community/netinfo';
+
 export enum Languages {
   cz = 'cz',
   en = 'en',
@@ -22,3 +24,36 @@ export enum StorageKeys {
 }
 
 export type ModalType = 'success' | 'error' | 'info';
+
+export type DeviceInfo = {
+  isLoadingInfo: boolean;
+  OS: string;
+  brand: string;
+  isCameraPresent: boolean;
+  carrier: string;
+  deviceId: string;
+  version: string;
+  uniqueId: string;
+  userAgent: string;
+  isAirplaneMode: boolean;
+  isEmulator: boolean;
+  isPinOrFingerprintSet: boolean;
+  isTablet: boolean;
+  isLowRamDevice: boolean;
+  isLandscape: boolean;
+  hasGms: boolean;
+  deviceType: string;
+  isLocationEnabled: boolean;
+};
+
+export type NetworkInfo = {
+  isConnected: boolean | null;
+  isInternetReachable: boolean | null;
+  type: NetInfoStateType;
+  details: any;
+};
+
+export type Location = {
+  latitude: number;
+  longitude: number;
+};
