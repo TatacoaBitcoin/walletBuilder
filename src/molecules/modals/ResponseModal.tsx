@@ -18,7 +18,10 @@ interface Props {
 const ResponseModal = ({ visible, type, message, onClose }: Props) => {
   const colors = useThemeColors();
 
-  const modalConfig: Record<ModalType, { icon: keyof typeof Icons; color: string }> = {
+  const modalConfig: Record<
+    ModalType,
+    { icon: keyof typeof Icons; color: string }
+  > = {
     success: { icon: 'Check', color: colors.success },
     error: { icon: 'Cross', color: colors.error },
     info: { icon: 'Alert', color: colors.info },

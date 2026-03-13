@@ -26,10 +26,14 @@ const Settings = () => {
   return (
     <ScreenTemplate>
       <View style={styles.container}>
-        <Button onPress={() => navigation.navigate(Routes.Language)}>
+        <Button
+          onPress={() => navigation.getParent()?.navigate(Routes.Language)}
+        >
           {t('Settings.LanguageBtn')}
         </Button>
-        <Button onPress={() => navigation.navigate(Routes.Currency)}>
+        <Button
+          onPress={() => navigation.getParent()?.navigate(Routes.Currency)}
+        >
           {t('Settings.CurrencyBtn')}
         </Button>
 
@@ -51,7 +55,9 @@ const Settings = () => {
                 <Text
                   style={[
                     styles.themeOptionText,
-                    { color: isSelected ? colors.primary : colors.textSecondary },
+                    {
+                      color: isSelected ? colors.primary : colors.textSecondary,
+                    },
                   ]}
                 >
                   {t(option.labelKey)}
