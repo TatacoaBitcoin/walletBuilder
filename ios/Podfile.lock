@@ -1538,7 +1538,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-safe-area-context (5.6.1):
+  - react-native-safe-area-context (5.7.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1550,8 +1550,8 @@ PODS:
     - React-graphics
     - React-ImageManager
     - React-jsi
-    - react-native-safe-area-context/common (= 5.6.1)
-    - react-native-safe-area-context/fabric (= 5.6.1)
+    - react-native-safe-area-context/common (= 5.7.0)
+    - react-native-safe-area-context/fabric (= 5.7.0)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-renderercss
@@ -1562,7 +1562,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-safe-area-context/common (5.6.1):
+  - react-native-safe-area-context/common (5.7.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -1584,7 +1584,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-safe-area-context/fabric (5.6.1):
+  - react-native-safe-area-context/fabric (5.7.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2039,7 +2039,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - RNScreens (4.15.3):
+  - RNScreens (4.24.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2061,9 +2061,9 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
-    - RNScreens/common (= 4.15.3)
+    - RNScreens/common (= 4.24.0)
     - Yoga
-  - RNScreens/common (4.15.3):
+  - RNScreens/common (4.24.0):
     - hermes-engine
     - RCTRequired
     - RCTTypeSafety
@@ -2464,7 +2464,7 @@ SPEC CHECKSUMS:
   react-native-geolocation: fe635c262940780d5cef40e03d4f1d8f72edde26
   react-native-get-random-values: 21325b2244dfa6b58878f51f9aa42821e7ba3d06
   react-native-netinfo: 13886ae458c33dbb849592dcd75e1795e3d70842
-  react-native-safe-area-context: add9b4ba236fe95ec600604d0fc72f395433dd59
+  react-native-safe-area-context: 29044d05d61f2c60d0828c373bd0ebe17eed58d0
   react-native-vector-icons-material-design-icons: c502df5b988ce85d6c7d2b7ee909818315760b82
   React-NativeModulesApple: b94faa2dce6d8c0a9d722ed7ee27b996d28b62d1
   React-networking: e409d8fb062162da6293e98b77f8d80cf4430e07
@@ -2503,7 +2503,7 @@ SPEC CHECKSUMS:
   RNCClipboard: 398455e1ad6a44a94d679452b951ffb788e8599b
   RNDeviceInfo: d79872e11c8e9c4de0d65b0ee6e0cee719f37fea
   RNKeychain: 91be81cd32b30c7d4c2569dcad29b472d9b93982
-  RNScreens: 19271d3e5d0e9231fd3bd1971887c222495976fc
+  RNScreens: 088d923c4327c63c9f8c942cae17a9d038f47d97
   RNSVG: a0c5c483791e90f3194ce056452ac83000961264
   VisionCamera: 2230ecfd78a1f6cddd8be0fe4e6589f21a6385e1
   Yoga: 7c1c3b93e408ac46c7ed64b5641ca7161747378d
