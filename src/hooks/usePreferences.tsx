@@ -56,24 +56,26 @@ export const usePreferences = () => {
   const loadPreferences = useCallback(async () => {
     setIsLoadingPreferences(true);
     try {
-      const value = await AsyncStorage.multiGet([
+      const values = await AsyncStorage.getMany([
         StorageKeys.CURRENCY,
         StorageKeys.LANGUAGE,
         StorageKeys.THEME,
       ]);
-      const [currencyEntry, languageEntry, themeEntry] = value;
+      const currencyValue = values[StorageKeys.CURRENCY];
+      const languageValue = values[StorageKeys.LANGUAGE];
+      const themeValue = values[StorageKeys.THEME];
 
-      if (currencyEntry[1]) {
-        setCurrency(JSON.parse(currencyEntry[1]));
+      if (currencyValue) {
+        setCurrency(JSON.parse(currencyValue));
       }
 
-      if (languageEntry[1]) {
-        setLanguage(languageEntry[1] as Languages);
-        await i18n.changeLanguage(languageEntry[1]);
+      if (languageValue) {
+        setLanguage(languageValue as Languages);
+        await i18n.changeLanguage(languageValue);
       }
 
-      if (themeEntry[1]) {
-        setThemeMode(themeEntry[1] as ThemeMode);
+      if (themeValue) {
+        setThemeMode(themeValue as ThemeMode);
       }
     } catch (error) {
       console.warn('Error reading settings', error);
