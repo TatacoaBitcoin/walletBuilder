@@ -1772,21 +1772,21 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-12.0.1.tgz#fec75f4093c27778479d8927b4f51f133b8a13a4"
   integrity sha512-P/3caXIvfYSJG8AWJVefukg+ZGRPs+M4Lp3pNJtgcTYoJxCjWrKQGNnCkj/Cz//zWa/avGed0i/wzm0T8vV2IQ==
 
-"@react-native-vector-icons/common@^12.3.0":
-  version "12.3.0"
-  resolved "https://registry.yarnpkg.com/@react-native-vector-icons/common/-/common-12.3.0.tgz#8a3cb778fd197e971da0fa69a35fa4fc8b030f1a"
-  integrity sha512-5GMBcLBkA0MuciweYcrSyvi9fYGanfVnE2J+pwHx1QiaVgTaoCm4rylJgSS77MVI5qUiGh7aJpqq5afSz2U4bw==
+"@react-native-vector-icons/common@^12.4.1":
+  version "12.4.1"
+  resolved "https://registry.yarnpkg.com/@react-native-vector-icons/common/-/common-12.4.1.tgz#ac83868048a078ccf0a9d94864723432147d1ccd"
+  integrity sha512-itfFrLRSNFgR7mS7C1JVuYs/H0WI2DiIW6JzN3MPzw0m1kycN7GPxWrO4/Je4G1JCW5x4i3lNvPB8259DtWLrQ==
   dependencies:
     find-up "^7.0.0"
     picocolors "^1.1.1"
     plist "^3.1.0"
 
-"@react-native-vector-icons/material-design-icons@^12.3.0":
-  version "12.3.0"
-  resolved "https://registry.yarnpkg.com/@react-native-vector-icons/material-design-icons/-/material-design-icons-12.3.0.tgz#2cad45c0a12afb0d05f7620eb8b81b4470f15f42"
-  integrity sha512-0fut9zjUJtGWwjGQ0lbirmPnjMkou9vkBY3d3ZsaHqXCBgV3fGeOWuRZ17eDpsGy/9BTRtBRI85RYdFGhdcB4Q==
+"@react-native-vector-icons/material-design-icons@^12.4.2":
+  version "12.4.2"
+  resolved "https://registry.yarnpkg.com/@react-native-vector-icons/material-design-icons/-/material-design-icons-12.4.2.tgz#4fc081a40ec46b5cc025ae6ece1ada7203cfa21f"
+  integrity sha512-hbXqaAJ4U0jyo6KrqHAqsM8BUFRTa4Nd5oUhbEtobPTFKwUzvZSzwRD782c7DGg4KWwgPNN35WMZpXnD1zBGuA==
   dependencies:
-    "@react-native-vector-icons/common" "^12.3.0"
+    "@react-native-vector-icons/common" "^12.4.1"
 
 "@react-native/assets-registry@0.84.1":
   version "0.84.1"
