@@ -14,7 +14,6 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   debug: __DEV__,
-  //   compatibilityJSON: 'v3',
   resources,
   fallbackLng: 'en',
   interpolation: {
