@@ -12,7 +12,9 @@ const ScreenTemplate = ({ children }: Props) => {
   const colors = useThemeColors();
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
+    <SafeAreaView
+      style={[styles.container, { backgroundColor: colors.background }]}
+    >
       {children}
     </SafeAreaView>
   );

@@ -26,11 +26,13 @@ yarn test path/to/file  # Run specific test file
 ## Architecture
 
 ### Entry Point Flow
+
 - `index.js` — App entry, wraps App with three providers: `PreferencesProvider` → `ResponseModalProvider` → `SecureStorageProvider`
 - `App.tsx` — Root component with `NavigationContainer` (dynamic theme) and `SafeAreaProvider`, renders `StackFlow` and the global `ResponseModal`
 - Toggles between `PublicFlow` (unauthenticated) and `PrivateFlow` (authenticated) — currently hardcoded to authenticated
 
 ### Navigation Structure (`src/navigation/`)
+
 - **StackFlow** — Root stack navigator, switches between public/private flows
 - **PublicFlow** — Stack navigator: Welcome → Login
 - **PrivateFlow** — Stack navigator containing:
@@ -39,6 +41,7 @@ yarn test path/to/file  # Run specific test file
 - Route definitions in `types.ts` with typed param lists for type-safe navigation
 
 ### State Management (`src/context/`)
+
 - **PreferencesProvider** (`PreferencesProvider.tsx`) — Language, currency, and theme mode; persisted via AsyncStorage
   - Hook: `usePreferencesState()` — access language, currency, themeMode, and their setters
 - **ResponseModalProvider** (`ModalProvider.tsx`) — Global modal notifications (success/error/info)
@@ -51,6 +54,7 @@ yarn test path/to/file  # Run specific test file
 ### Key Patterns
 
 **Hooks** (`src/hooks/`):
+
 - `usePreferences` — Manages language, currency, and theme mode with AsyncStorage persistence
 - `useMnemonics` — Generates BIP39 mnemonics in 9 languages using @scure/bip39
 - `useSecureStorage` — Wraps react-native-keychain for secure storage with biometric auth
@@ -64,22 +68,26 @@ yarn test path/to/file  # Run specific test file
 - `usePreventGoBack` — Prevents hardware back button navigation via BackHandler
 
 **Theme System**:
+
 - `ThemeMode` enum: `system`, `light`, `dark`
 - `useThemeColors()` returns a `ThemeColors` object (17 color properties)
 - `LightTheme`: Orange primary (#F7931A), gray text/surfaces
 - `DarkTheme`: Lighter orange (#F89B2A), dark surfaces (#000000, #1A1A1A)
 
 **Internationalization**:
+
 - i18next configured in `i18n.config.ts`
 - Translations in `src/config/localization/translations/` (en.json, es.json)
 - `Languages` enum in `src/types/index.ts` supports: en, es, cz, fr, it, ja, ko, pt, zh
 - 62 currencies supported in `src/config/localization/currencies.ts`
 
 **Storage Keys** (`src/types/index.ts`):
+
 - `StorageKeys.CURRENCY`, `StorageKeys.LANGUAGE`, `StorageKeys.THEME` — AsyncStorage keys
 - `SecureStorageKeys.MNEMONIC`, `SecureStorageKeys.PRIVATE_KEY`, `SecureStorageKeys.PIN`, `SecureStorageKeys.WALLET_CREDENTIALS` — Keychain keys
 
 ### Directory Structure
+
 - `src/atoms/` — Reusable UI components: `ScreenTemplate`, `QrCode`, `Animation` (Lottie wrapper)
 - `src/molecules/` — Composite components: `ResponseModal` (global notification modal)
 - `src/screens/` — Screen components organized by flow (public/, private/, private/settings/)

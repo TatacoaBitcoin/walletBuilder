@@ -29,7 +29,9 @@ const Home = () => {
         <Text style={{ color: colors.textPrimary }}>
           Currency: {currency.label}
         </Text>
-        <Button onPress={() => navigation.getParent()?.navigate(Routes.Scanner)}>
+        <Button
+          onPress={() => navigation.getParent()?.navigate(Routes.Scanner)}
+        >
           {t('Home.ScannerBtn')}
         </Button>
         <Button onPress={() => showModal('success', 'This is a success!')}>

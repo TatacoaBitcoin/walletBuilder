@@ -1,5 +1,8 @@
 import { useState, useCallback, useEffect } from 'react';
-import { BIOMETRY_TYPE, type AuthenticationPrompt } from 'react-native-keychain';
+import {
+  BIOMETRY_TYPE,
+  type AuthenticationPrompt,
+} from 'react-native-keychain';
 
 import {
   setSecureItem,

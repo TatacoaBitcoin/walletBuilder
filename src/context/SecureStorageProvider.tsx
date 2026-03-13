@@ -1,6 +1,9 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 
-import { BIOMETRY_TYPE, type AuthenticationPrompt } from 'react-native-keychain';
+import {
+  BIOMETRY_TYPE,
+  type AuthenticationPrompt,
+} from 'react-native-keychain';
 import { useSecureStorage } from '../hooks/useSecureStorage';
 
 interface SecureStorageContextType {

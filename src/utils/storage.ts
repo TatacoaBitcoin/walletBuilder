@@ -8,7 +8,10 @@ export const storeString = async (key: string, value: string) => {
   }
 };
 
-export const storeObject = async (key: string, value: Record<string, unknown>) => {
+export const storeObject = async (
+  key: string,
+  value: Record<string, unknown>,
+) => {
   try {
     const jsonValue = JSON.stringify(value);
     await AsyncStorage.setItem(key, jsonValue);
